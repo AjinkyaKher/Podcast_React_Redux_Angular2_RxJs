@@ -29,7 +29,7 @@ import {IState, ITodo} from './IState';
 })
 
 export class VisibleTodoListComponent {
-    private currentTodos: ITodos[]; 
+    private currentTodos: ITodo[]; 
     @Input()
     private state: IState;
     @Output() emitter = new EventEmitter();
