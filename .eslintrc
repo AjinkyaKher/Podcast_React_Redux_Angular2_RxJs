@@ -1,0 +1,21 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "max-len": [
+      1,
+      100,
+      2,
+      {
+        "ignoreComments": true
+      }
+    ]
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "ecmaFeatures": {
+    "module": true
+  }
+}

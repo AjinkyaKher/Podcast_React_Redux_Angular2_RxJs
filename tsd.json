@@ -1,0 +1,15 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "redux-thunk/redux-thunk.d.ts": {
+      "commit": "bf4ecf5b68887ed5a065e3922885c34d0f5739df"
+    },
+    "redux/redux.d.ts": {
+      "commit": "bf4ecf5b68887ed5a065e3922885c34d0f5739df"
+    }
+  }
+}
