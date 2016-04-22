@@ -7,21 +7,26 @@ import {MATERIAL_DIRECTIVES} from "ng2-material/all";
 import {AddTodoComponent} from './AddTodo.component';
 import {VisibleTodoListComponent} from './VisibleTodoList.component';
 import {IState, ITodo} from './IState';
+import {AppTitleComponent} from './AppTitle.component';
+import {FilterComponent} from './Filter.component';
 
 @Component({
-  directives: [MATERIAL_DIRECTIVES, AddTodoComponent, VisibleTodoListComponent],
+  directives: [MATERIAL_DIRECTIVES, AddTodoComponent, VisibleTodoListComponent, AppTitleComponent, FilterComponent],
   providers: [],
-  selector: 'root', 
+  selector: 'root1', 
   template: 
    `<div class="md-padding" layout="row" layout-align="center center">
         <div flex="80" layout="column" flex-xs="100">
             <md-card style="background-color: #3F51B5">
                 <md-card-content>
+                    <md-content layout-padding style="background-color: #3F51B5">
+                        <AppTitle> </AppTitle>
+                    </md-content>
                     <md-content layout-padding style="background-color: #E8EAF6">
                         <AddTodo (emitter)="UpdateToDoList($event)"> </AddTodo>
                     </md-content>
                     <md-content layout-padding style="background-color: #E8EAF6">
-                        <Filter> </Filter>
+                        <Filter (emitter)="UpdateVisibilityFilter($event)"> </Filter>
                     </md-content>
                     <md-content layout-padding style="background-color: #3F51B5">
                         <VisibleTodoList state="{{compressedState}}" (emitter)="UpdateTodoItem($event)"> </VisibleTodoList>
@@ -41,12 +46,15 @@ export class AppComponent {
     
     private compressedState: string = undefined;
     
-    private UpdateToDoList(todoItem: ITodo) {
+    private UpdateToDoList(todoItem: ITodo): void {
+        console.log('I am handling event emitted by my child');
+        console.log(todoItem);
         this.state.todos.push(todoItem);
+        console.log('changing a variable which is input to another component');
         this.compressedState = JSON.stringify(this.state);
     }
     
-    private UpdateTodoItem(todoId: number) {
+    private UpdateTodoItem(todoId: number): void {
         this.state.todos.map((todo) => {
             if(todo.id == todoId) {
                 todo.completed = !todo.completed;
@@ -54,5 +62,10 @@ export class AppComponent {
             }
         })
         this.compressedState = JSON.stringify(this.state);
+    }
+    
+    private UpdateVisibilityFilter(filter: string): void {
+        this.state.visibilityFilter = filter;
+        this.compressedState = JSON.stringify(this.state);   
     }
 }

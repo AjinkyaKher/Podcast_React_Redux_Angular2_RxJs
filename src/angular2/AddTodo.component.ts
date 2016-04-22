@@ -32,6 +32,7 @@ export class AddTodoComponent {
     @Output() emitter = new EventEmitter();
     
     private AddTodo(): void {
+        console.log('I am emitting');
         this.emitter.emit(
             {id: this.id, 
              text: this.userInput,

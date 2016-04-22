@@ -35,6 +35,7 @@ export class VisibleTodoListComponent {
     @Output() emitter = new EventEmitter();
     
     public ngOnChanges(changes: any): void {
+        console.log('Looks like input variable changed');
         if(changes.state && changes.state.currentValue) {
             this.state = JSON.parse(changes.state.currentValue);
             if (this.state.visibilityFilter === 'SHOW_ALL') {
