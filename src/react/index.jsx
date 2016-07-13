@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import App from './components/App';
 import todoApp from './reducers';
+import {toggleTodo} from './actions/index';
 
 const logger = store => next => action => {
   console.log('dispatching', action);

@@ -1,24 +1,16 @@
-/* eslint-disable*/
+/* eslint-disable */
 
 export const ADD_TODO = 'ADD_TODO';
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
 export const TOGGLE_TODO = 'TOGGLE_TODO';
 
 let nextTodoId = 0;
-// export const addTodo = (text) =>
-//   ({
-//     type: ADD_TODO,
-//     id: nextTodoId++,
-//     text,
-//   });
-
-export const addTodo = function (text) {
-  return {
+export const addTodo = (text) =>
+  ({
     type: ADD_TODO,
     id: nextTodoId++,
-    text: text,    
-  };
-};
+    text,
+  });
 
 export const setVisibilityFilter = (filter) =>
   ({

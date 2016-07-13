@@ -1,7 +1,7 @@
 {
-  "name": "react-todo",
+  "name": "react-angular2-todo",
   "version": "1.0.0",
-  "description": "A simple To do app using React, Redux, Babel, and Webpack",
+  "description": "A simple To do app using React, Redux, Angular2, RxJs, Babel, and Webpack",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,11 @@
   "keywords": [],
   "author": {
     "name": "Ajinkya Kher",
-    "email": "ajinkyak@slalom.com"
+    "email": "kher.ajinkya@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AjinkyaKher/React_Redux_Angular2_RxJs.git"
   },
   "license": "ISC",
   "dependencies": {
@@ -17,12 +21,19 @@
     "react-dom": "^0.14.7",
     "react-redux": "^4.4.1",
     "redux": "^3.3.1",
+    "@angular/common": "2.0.0-rc.4",
+    "@angular/compiler": "2.0.0-rc.4",
+    "@angular/core": "2.0.0-rc.4",
+    "@angular/forms": "0.2.0",
+    "@angular/http": "2.0.0-rc.4",
+    "@angular/platform-browser": "2.0.0-rc.4",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.4",
+    "bootstrap": "^3.3.6",
     "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.2",
+    "rxjs": "^5.0.0-beta.6",
     "zone.js": "0.6.6",
     "es6-shim": "^0.35.0",
-    "angular2": "2.0.0-beta.14",
-    "bootstrap": "^3.3.6"
+    "ng2-material": "^0.5.0"
   },
   "devDependencies": {
     "babel-cli": "^6.6.5",
@@ -34,9 +45,9 @@
     "eslint": "^2.4.0",
     "eslint-config-airbnb": "^6.2.0",
     "eslint-plugin-react": "^4.2.3",
+    "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.14.0",
     "muicss": "^0.4.7",
-    "ng2-material": "^0.3.6",
     "redux-thunk": "^2.0.1",
     "ts-loader": "^0.8.0",
     "typescript": "^1.8.9",

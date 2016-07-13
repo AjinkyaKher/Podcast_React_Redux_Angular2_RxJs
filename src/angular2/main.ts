@@ -2,10 +2,12 @@
  * main entry point
  */
 
+import 'core-js/es6';
 import 'reflect-metadata';
 import 'zone.js/dist/zone';
-import 'zone.js/dist/long-stack-trace-zone';
-import {bootstrap} from 'angular2/platform/browser';
-import {AppComponent} from './app.component';
+import {bootstrap} from '@angular/platform-browser-dynamic';
 
-bootstrap(AppComponent);
+import {AppComponent} from './app.component';
+import {FormDataService} from './services/formdata.service';
+
+bootstrap(AppComponent, [FormDataService]);

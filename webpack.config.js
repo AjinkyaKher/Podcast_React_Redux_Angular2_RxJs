@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     react: [
-      './src/react/index.js',
+      './src/react/index.jsx',
     ],
     angular2: [
       './src/angular2/main.ts',
@@ -22,6 +22,10 @@ module.exports = {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         loader: 'ts-loader',
+      },
+      {
+        test: /\.html$/,
+        loader: 'html-loader',
       },
     ],
   },
