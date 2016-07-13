@@ -15,13 +15,11 @@ export class FormDataService {
   private visibilityFilterDispatcher: BehaviorSubject<string>;
   private state: Observable<IState>;
   private currentTodos: ITodo[];
-  private currentVisibilityFilter: string;
 
   constructor() {
     this.addTodoDispatcher = new BehaviorSubject([]);
     this.visibilityFilterDispatcher = new BehaviorSubject('SHOW_ALL');
     this.currentTodos = [];
-    this.currentVisibilityFilter = 'SHOW_ALL';
 
     this.state = Observable.combineLatest(
       this.addTodoDispatcher,
@@ -35,8 +33,8 @@ export class FormDataService {
     );
 
     this.state.subscribe((currState: IState) => {
+      console.log('State Change'); console.log(currState);
       this.currentTodos = currState.todos;
-      this.currentVisibilityFilter = currState.visibilityFilter;
     });
   }
 
@@ -50,10 +48,6 @@ export class FormDataService {
 
   public getCurrentTodos(): ITodo[] {
     return this.currentTodos;
-  }
-
-  public getCurrentVisibilityFilter(): string {
-    return this.currentVisibilityFilter;
   }
 
   public getState(): Observable<IState> {

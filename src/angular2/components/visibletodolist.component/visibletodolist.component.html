@@ -2,7 +2,7 @@
      <li key="#todo.id"
          *ngFor="let todo of (currentTodos | async)"
          style="cursor: pointer; color: #FFFFFF"
-         (click)="ToggleTodo(todo.id)">
+         (click)="toggleTodo(todo.id)">
          <span *ngIf="todo.completed">
              <i class="fa fa-check-circle"></i>
          </span>

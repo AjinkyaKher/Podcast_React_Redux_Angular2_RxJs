@@ -1,11 +1,11 @@
 import {Component} from '@angular/core';
-import {MATERIAL_DIRECTIVES} from 'ng2-material';
+// import {MATERIAL_DIRECTIVES} from 'ng2-material';
 
 import {FormDataService} from '../.././services/formdata.service';
 
 @Component({
     providers: [],
-    directives: [MATERIAL_DIRECTIVES],
+    directives: [],
     selector: 'Filter',
     template: require('./filter.component.html'),
 })

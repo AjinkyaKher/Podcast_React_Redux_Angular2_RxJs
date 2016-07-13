@@ -1,5 +1,14 @@
-<div layout="row" layout-align="space-between center">
-   <button md-button md-no-ink class="md-primary" (click)="setVisibilityFilter('SHOW_ALL')">ALL </button>
-   <button md-button md-no-ink class="md-primary" (click)="setVisibilityFilter('SHOW_ACTIVE')">ACTIVE </button>
-   <button md-button md-no-ink class="md-primary" (click)="setVisibilityFilter('SHOW_COMPLETED')">COMPLETED </button>
- </div>
+<ul class="mui-tabs__bar mui-tabs__bar--justified">
+ <li class="mui--is-active" (click)="setVisibilityFilter('SHOW_ALL')">
+   <a data-mui-toggle="tab" data-mui-controls="pane-justified-1">ALL</a>
+ </li>
+ <li (click)="setVisibilityFilter('SHOW_ACTIVE')">
+   <a data-mui-toggle="tab" data-mui-controls="pane-justified-2">ACTIVE</a>
+ </li>
+ <li (click)="setVisibilityFilter('SHOW_COMPLETED')">
+   <a data-mui-toggle="tab" data-mui-controls="pane-justified-3">COMPLETED</a>
+ </li>
+</ul>
+<div class="mui-tabs__pane mui--is-active" id="pane-justified-1"></div>
+<div class="mui-tabs__pane" id="pane-justified-2"></div>
+<div class="mui-tabs__pane" id="pane-justified-3"></div>

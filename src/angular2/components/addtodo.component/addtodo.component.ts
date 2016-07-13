@@ -3,12 +3,12 @@
  */
 
 import {Component} from '@angular/core';
-import {MATERIAL_DIRECTIVES} from 'ng2-material';
+// import {MATERIAL_DIRECTIVES} from 'ng2-material';
 
 import {FormDataService} from '../.././services/formdata.service';
 
 @Component({
-  directives: [MATERIAL_DIRECTIVES],
+  directives: [],
   providers: [],
   selector: 'AddTodo',
   template: require('./addtodo.component.html'),

@@ -1,20 +1,13 @@
-<div class="md-padding" layout="row" layout-align="center center">
-     <div flex="80" layout="column" flex-xs="100">
-         <md-card style="background-color: #3F51B5">
-             <md-card-content>
-                 <md-content layout-padding style="background-color: #3F51B5">
-                     <AppTitle> </AppTitle>
-                 </md-content>
-                 <md-content layout-padding style="background-color: #E8EAF6">
-                     <AddTodo (emitter)="UpdateToDoList($event)"> </AddTodo>
-                 </md-content>
-                 <md-content layout-padding style="background-color: #E8EAF6">
-                     <Filter (emitter)="UpdateVisibilityFilter($event)"> </Filter>
-                 </md-content>
-                 <md-content layout-padding style="background-color: #3F51B5">
-                     <VisibleTodoList state="{{compressedState}}" (emitter)="UpdateTodoItem($event)"> </VisibleTodoList>
-                 </md-content>
-             </md-card-content>
-         </md-card>
-     </div>
- </div>
+<br/>
+<div class="mui-container-fluid">
+  <div class="mui-row">
+    <div class="mui-col-md-10 mui-col-md-offset-1">
+      <div class="mui-panel" style="background-color: #3F51B5; text-align: center;">
+        <AppTitle> </AppTitle>
+        <AddTodo> </AddTodo>
+        <Filter> </Filter>
+        <VisibleTodoList> </VisibleTodoList>
+      </div>
+    </div>
+  </div>
+</div>
