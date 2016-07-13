@@ -4,8 +4,6 @@ import Col from 'muicss/lib/react/col';
 import Panel from 'muicss/lib/react/panel';
 import AddTodo from '../containers/AddTodo';
 import VisibleTodoList from '../containers/VisibleTodoList';
-import AppTitle from './AppTitle';
-import Filter from '../containers/Filter';
 
 const App = () => (
   <Row className="mui--text-center">
@@ -13,9 +11,7 @@ const App = () => (
    <Col md="10" md-offset="1">
     <Panel style={{ backgroundColor: '#3F51B5' }}>
       <div>
-        <AppTitle color="#FFFFFF" />
         <AddTodo />
-        <Filter />
         <VisibleTodoList />
       </div>
     </Panel>
